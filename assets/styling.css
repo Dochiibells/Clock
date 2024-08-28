@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    /* Light mode colors */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background:#2956B2;
+    --button-text: #000000;
+    --button-hover: #234892;
+}
+
+[data-theme='dark'] {
+    /* Dark mode colors */
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --button-background: #555555;
+    --button-text: #ffffff;
+    --button-hover: #444;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+}
+
+.timer-container {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#timerDisplay {
+    font-size: 7rem;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 6em;
+    border: none;
+    color: var(--text-color);
+}
+
+#timerDisplay {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.time-add-optional button {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    border: none;
+    padding: 7px 13px;
+    background-color: var(--button-background);
+    color: var(--button-text);
+}
+
+.time-add-optional button:hover {
+    background-color: var(--button-hover);
+}
+
+.play-pause-reset button {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    border: none;
+    padding: 5px 15px;
+}
+
+.play-pause-reset button:hover {
+    background-color: var(--button-hover);
+}
+
+box-icon {
+    width: 5em;
+    height: 2em;
+    font-size: 1.4em;
+    color: var(--text-color);
+}
+
+.theme-toggle {
+    margin: 20px;
+}
+
+.theme-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.theme-toggle box-icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle box-icon[name='moon'] {
+    opacity: 0;
+}
+
+[data-theme='dark'] .theme-toggle box-icon[name='moon'] {
+    opacity: 1;
+}
+
+.theme-toggle box-icon[name='sun'] {
+    opacity: 1;
+}
+
+[data-theme='dark'] .theme-toggle box-icon[name='sun'] {
+    opacity: 0;
+}
+
+@media (max-width: 426px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+.timer-container {
+    width: 100%;
+}
+
+    #timerDisplay {
+        font-size: 4em;
+    }
+
+    .play-pause-reset button {
+        padding: 4px 1px;
+    }
+}
+
+@media (max-width: 321px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .timer-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #timerDisplay {
+        font-size: 4em;
+    }
+
+    .play-pause-reset button {
+        padding: 4px 1px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Clock</title>
+    <link rel="stylesheet" href="assets/styling.css">
+    <link rel="icon" type="image/x-icon" href="assets/clock-image.jpg">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <div class="toogle-theme">
+    </div>
+    <div class="timer-container">
+        <div class="theme-toggle">
+            <button onclick="toggleTheme()" aria-label="Toggle Theme">
+                <box-icon name='sun' type='solid'></box-icon>
+                <box-icon name='moon' type='solid'></box-icon>
+            </button>
+        </div>
+        <h1>Timer</h1>
+        <div class="display" id="timerDisplay" contenteditable="true">00:00:00</div>
+        <audio src="assets/alarm/clock-alarm-8761.mp3" preload="auto" id="alarmSound"></audio>
+        <div class="time-add-optional">
+            <button class="time-adjust" onclick="adjusTime(30)">+0.30</button>
+            <button class="time-adjust" onclick="adjusTime(60)">+1.00</button>
+            <button class="time-adjust" onclick="adjusTime(300)">+5.00</button>
+        </div>
+
+        <div class="play-pause-reset">
+            <button class="control-btn" onclick="startTimer()"><box-icon name='play'></box-icon></button>
+            <button class="control-btn" onclick="pauseTimer()"><box-icon name='pause' ></box-icon></button>
+            <button class="control-btn" onclick="resetTimer()"><box-icon name='reset' ></box-icon></button>
+        </div>
+    </div>
+
+</body>
+    <script src="assets/clock.js "></script>
+</html>
